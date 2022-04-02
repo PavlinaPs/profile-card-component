@@ -165,10 +165,36 @@ body {
 }
 
 
-@media (min-width: 35em) {
+@media (min-width: 45em) {
+    body {
+        /* 1440px */
+        /* width: 90rem; */
+    
+        background-size: auto, auto;
+        background-position:
+            -20.5rem -35.5rem,
+            39.9rem 20.5rem;
+    }
 
+    .card {
+        width: 21.95rem;
+    }
 
+    .card__top-background {
+        width: 21.95rem;
+    }
 
+    .card__profile-image {
+        left: 7.6rem;
+    }
 
+    .card__stats {
+        gap: 2.6em;
+        padding: 1em 2.75em;
+        text-align: center;
+    }
 
+    .card__stats__stat-block:last-child {
+        margin-left: 0.6em;
+    }
 }
