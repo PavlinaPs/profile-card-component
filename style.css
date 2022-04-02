@@ -6,7 +6,7 @@
     --clr-dark-grayish-blue: hsl(227, 10%, 46%);
 
     /* colors */ /* neutral */
-    --clr-dark-gray: hsl(0, 0%, 59%);
+    --clr-dark-gray: hsla(0, 0%, 59%, 0.25);
     --clr-white: hsl(0, 0%, 100%);
 
     /* typography */
@@ -23,6 +23,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/*** utility classes ***/
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
 
 /*** set-up ***/
@@ -47,26 +54,103 @@ body {
     background-image: 
         url(./images/bg-pattern-top.svg), 
         url(./images/bg-pattern-bottom.svg);
-    background-size: auto auto;
+    background-size: cover, cover;
     background-position:
-        144% 173%, 
-        -35% -78%;
+        -21.4rem -22.6rem,
+        14.3rem 20.5rem;
+    background-attachment: fixed, fixed;
     background-repeat: no-repeat, no-repeat;
-
 }
+
+
 
 /*** components ***/
 .card {
+    position: relative;
     width: 20.25rem;
-    height: 23.25rem;
+    height: 23.375rem;
     background-color: white;
     border-radius: 0.8rem;
-    outline: 1px solid red;
 }
 
+.card__top-background {
+    width: 20.25rem;
+    height: 8.81rem;
+    background: url(./images/bg-pattern-card.svg);
+    background-position: center;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
 
+.card__profile-image {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 5.45rem;
+    left: 6.6rem;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+}
 
+.card__profile-image > img {
+    border-radius: 50%;
+    border: 5px solid var(--clr-white);  
+}
 
+.card__user-info {
+    height: 9.1rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--clr-dark-gray);
+    text-align: center;
+}
+
+.card__user-info__name {
+    margin-top: 2.5rem;
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-desaturated-blue);
+    
+}
+
+.card__user-info__age {
+    font-weight: var(--fw-normal);
+    color: var(--clr-dark-grayish-blue)
+}
+
+.card__user-info__city {
+    margin-top: 0.5rem;
+    font-size: .85rem;
+    color: var(--clr-dark-grayish-blue)
+}
+
+.card__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2.2em;
+    padding: 1em 2.3em;
+    text-align: center;
+}
+
+.card__stats__stat-block {
+    text-align: center;
+}
+
+.card__stats__stat-block:last-child {
+    margin-left: 0.5em;
+}
+
+.card__stats__number {
+    margin-top: 0.4em;
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-desaturated-blue);
+}
+
+.card__stats_description {
+    margin-top: 0.3em;
+    font-size: 0.6rem;
+    color: var(--clr-dark-grayish-blue);
+    letter-spacing: 1.8px;
+}
 
 .attribution {
     position: fixed;
@@ -81,7 +165,7 @@ body {
 }
 
 
-@media (min-width: 45em) {
+@media (min-width: 35em) {
 
 
 
