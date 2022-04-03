@@ -51,18 +51,26 @@ body {
     font-weight: var(--fw-normal);
 
     background-color: var(--clr-dark-cyan);
-    background-image: 
-        url(./images/bg-pattern-top.svg), 
-        url(./images/bg-pattern-bottom.svg);
-    background-size: cover, cover;
-    background-position:
-        -21.4rem -22.6rem,
-        14.3rem 20.5rem;
-    background-attachment: fixed, fixed;
-    background-repeat: no-repeat, no-repeat;
 }
 
+.card::before {
+    content: url(./images/bg-pattern-top.svg);
+    display: block;
+    position: absolute;
+    z-index: -5;
+    bottom: 9em;
+    right: 6.2em; 
 
+}
+
+.card::after {
+    content: url(./images/bg-pattern-bottom.svg);
+    display: block;
+    position: absolute;
+    z-index: -10;
+    top: 9.7em;
+    left: 4em;
+}
 
 /*** components ***/
 .card {
@@ -140,13 +148,13 @@ body {
 }
 
 .card__stats__number {
-    margin-top: 0.4em;
+    margin-top: 0.35em;
     font-weight: var(--fw-bold);
     color: var(--clr-dark-desaturated-blue);
 }
 
 .card__stats_description {
-    margin-top: 0.3em;
+    margin-top: 0.45em;
     font-size: 0.6rem;
     color: var(--clr-dark-grayish-blue);
     letter-spacing: 1.8px;
@@ -166,19 +174,18 @@ body {
 
 
 @media (min-width: 45em) {
-    body {
-        /* 1440px */
-        /* width: 90rem; */
-        width: auto;
-        background-size: auto, auto;
-        background-position:
-            -20.5rem -35.5rem,
-            39.9rem 20.5rem;
-        background-attachment: fixed;
-    }
-
     .card {
         width: 21.95rem;
+    }
+
+    .card::before {
+        bottom: 4.2em;
+        right: 11.3em;       
+    }
+
+    .card::after {
+        top: 11.5em;
+        left: 7.9em;
     }
 
     .card__top-background {
