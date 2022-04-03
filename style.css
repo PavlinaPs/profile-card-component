@@ -42,6 +42,8 @@ body {
     position: relative;
     /* 375px */
     min-width: 23.4375rem;
+    /* width: auto; */
+    /* width: 23.4375rem; */
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
@@ -51,17 +53,23 @@ body {
     font-weight: var(--fw-normal);
 
     background-color: var(--clr-dark-cyan);
-    background-image: 
-        url(./images/bg-pattern-top.svg), 
-        url(./images/bg-pattern-bottom.svg);
-    background-size: cover, cover;
-    background-position:
-        -21.4rem -22.6rem,
-        14.3rem 20.5rem;
-    background-attachment: fixed, fixed;
-    background-repeat: no-repeat, no-repeat;
 }
 
+.card__bacground-bubbles {
+    position: absolute;
+}
+
+.card__background-bubble__top {
+    position: relative;
+    top: -3.5em;
+    left: -15.5em;
+}
+
+.card__background-bubble__bottom {
+    position: relative;
+    top: 1.3em;
+    left: 15.2em;
+}
 
 
 /*** components ***/
@@ -165,16 +173,21 @@ body {
 }
 
 
-@media (min-width: 45em) {
+@media (min-width: 50em) {
     body {
-        /* 1440px */
-        /* width: 90rem; */
+        /* width: 1440px; */
+        /* width: 90rem;  */
+        width: auto;
+    }
+
+     .card__background-bubble__top {
+        top: 6em;
+        left: -28.75em;
+    }
     
-        background-size: auto, auto;
-        background-position:
-            -20.5rem -35.5rem,
-            39.9rem 20.5rem;
-        background-attachment: fixed;
+    .card__background-bubble__bottom {
+        top: 1.3em;
+        left: 25em;
     }
 
     .card {
