@@ -41,7 +41,7 @@ body {
     
     position: relative;
     /* 375px */
-    min-width: 23.4375rem;
+    width: 23.4375rem;
     /* width: auto; */
     /* width: 23.4375rem; */
     min-height: 100vh;
@@ -56,21 +56,20 @@ body {
 }
 
 .card__bacground-bubbles {
-    position: absolute;
+    position: fixed;
 }
 
 .card__background-bubble__top {
     position: relative;
-    top: -3.5em;
-    left: -15.5em;
+    top: -4.5em;
+    left: -13.7em;  
 }
 
 .card__background-bubble__bottom {
     position: relative;
-    top: 1.3em;
-    left: 15.2em;
+    top: 2.0em;
+    left: 13.2em;
 }
-
 
 /*** components ***/
 .card {
