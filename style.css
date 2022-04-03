@@ -169,7 +169,7 @@ body {
     body {
         /* 1440px */
         /* width: 90rem; */
-    
+        width: auto;
         background-size: auto, auto;
         background-position:
             -20.5rem -35.5rem,
