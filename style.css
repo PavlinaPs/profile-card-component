@@ -51,6 +51,7 @@ body {
     font-weight: var(--fw-normal);
 
     background-color: var(--clr-dark-cyan);
+    
 }
 
 .card::before {
@@ -60,7 +61,6 @@ body {
     z-index: -5;
     bottom: 9em;
     right: 6.2em; 
-
 }
 
 .card::after {
@@ -75,8 +75,9 @@ body {
 /*** components ***/
 .card {
     position: relative;
-    width: 20.25rem;
-    height: 23.375rem;
+    
+    /* min-width: 20.25rem;
+    min-height: 23.375rem; */
     background-color: white;
     border-radius: 0.8rem;
 }
@@ -116,7 +117,6 @@ body {
     font-size: var(--fs-normal);
     font-weight: var(--fw-bold);
     color: var(--clr-dark-desaturated-blue);
-    
 }
 
 .card__user-info__age {
@@ -161,7 +161,7 @@ body {
 }
 
 .attribution {
-    position: fixed;
+    position: absolute;
     bottom: 1rem;
     width: 100%;
     font-size: 11px;
@@ -175,9 +175,13 @@ body {
 
 
 @media (min-width: 35em) {
-    .card {
-        width: 21.95rem;
+    body {
+        overflow: hidden;
     }
+
+    /* .card {
+        width: 21.95rem;
+    } */
 
     .card::before {
         bottom: 4.2em;

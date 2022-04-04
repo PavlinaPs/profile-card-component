@@ -30,7 +30,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 | Mobile layout |
 |:--:|
-![Mobile layout](./screenshots/screenshot-mobile-top.jpg)
+![Mobile layout](./screenshots/screenshot-mobile.jpg)
 
 - Solution URL: https://github.com/PavlinaPs/profile-card-component
 - Live Site URL: https://pavlinaps.github.io/profile-card-component/
@@ -63,8 +63,8 @@ I thought I did something wrong. After I researched it I think I I did the borde
 ```
 Here is the link to Stack Overflow on this issue [Gap between border and image when border radius is added](https://stackoverflow.com/questions/23490320/gap-between-border-and-image-when-border-radius-is-added). I am a little bit surprised that a 7 year old article is still needed.
 
-**2. Background bubbles:**
-The issue was to make the bubble illustrations stay in the same place behind the card when the window changes size or zoom. I kept each attempt as a git branch for reference.
+**2. The background bubbles troubles:**
+The issue was to make the bubble illustrations stay in the same place behind the card when the window changes size or zoom. I keep each attempt as a git branch for reference.
 I tried:
 - Adding bubble illustrations to the body as *multiple backgrounds*. I learned a lot here. I didn't know there is such a feature. I explored it thouroughly.
 Link to MDN: [Using multiple backgrounds](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds/).
@@ -84,7 +84,7 @@ The background did not behave as intended though.
     background-repeat: no-repeat, no-repeat;
     }
 ```
-- to *position* the bubble illustrations wrapped in a \<div> *absolutly* to the \<body> element.
+- to *position* the bubble illustrations \<img>s wrapped in a \<div> *absolutly* to the \<body> element.
 The background also did not behave as intended.
 ```html
     <body>
@@ -117,8 +117,7 @@ The background also did not behave as intended.
 
 - Then I realized that if I want the background scaled with the card and not change position, it needs to be *positioned absolutely to the card*, not to the body. I decided to learn how to use pseudo-elements ::before & ::after and used it.
 Kevin Powell's 3-part tutorial was a great help, as always: [Before and After pseudo elements explained - part one: how they work](https://youtu.be/zGiirUiWslI)
-Background scales with card and stays in place. 
-**I am finally happy with this solution.**
+Background scales with card and stays in place on a big screen. but on mobile screens there is a big vertical overflow and the card is not centered. I haven't figured why.
 
 ```css
 .card::before {
