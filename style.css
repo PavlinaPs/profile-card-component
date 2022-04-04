@@ -53,14 +53,23 @@ body {
     background-color: var(--clr-dark-cyan);
 }
 
+/*** components ***/
+.card {
+    align-self: center;
+    position: relative;
+    width: 20.25rem;
+    height: 23.375rem;
+    background-color: var(--clr-white);
+    border-radius: 0.8rem;
+}
+
 .card::before {
     content: url(./images/bg-pattern-top.svg);
     display: block;
     position: absolute;
     z-index: -5;
     bottom: 9em;
-    right: 6.2em; 
-
+    right: 6.2em;
 }
 
 .card::after {
@@ -70,15 +79,6 @@ body {
     z-index: -10;
     top: 9.7em;
     left: 4em;
-}
-
-/*** components ***/
-.card {
-    position: relative;
-    width: 20.25rem;
-    height: 23.375rem;
-    background-color: white;
-    border-radius: 0.8rem;
 }
 
 .card__top-background {
@@ -116,7 +116,6 @@ body {
     font-size: var(--fs-normal);
     font-weight: var(--fw-bold);
     color: var(--clr-dark-desaturated-blue);
-    
 }
 
 .card__user-info__age {
@@ -165,6 +164,7 @@ body {
     bottom: 1rem;
     width: 100%;
     font-size: 11px;
+    color: var(--clr-dark-desaturated-blue);
     text-align: center;
 }
 
@@ -172,8 +172,7 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-
-@media (min-width: 45em) {
+@media (min-width: 35em) {
     .card {
         width: 21.95rem;
     }
