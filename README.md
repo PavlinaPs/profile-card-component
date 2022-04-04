@@ -32,8 +32,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 |:--:|
 ![Mobile layout](./screenshots/screenshot-mobile-top.jpg)
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/PavlinaPs/profile-card-component
+- Live Site URL: https://pavlinaps.github.io/profile-card-component/
 
 ## My process
 
@@ -50,8 +50,9 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 I really learned a lot solving this challenge. This is going to be a long README. 
 There were two issues I had to adress:
 
-#####1) The profile image didn't fit exactly in its border:
+**1. The profile image didn't fit exactly in its border:**
 ![](./screenshots/border-gap.jpg)
+
 I thought I did something wrong. After I researched it I think I I did the border correctly and solved this issue by adding white background to its parent \<div>. 
 
 ```css
@@ -62,7 +63,7 @@ I thought I did something wrong. After I researched it I think I I did the borde
 ```
 Here is the link to Stack Overflow on this issue [Gap between border and image when border radius is added](https://stackoverflow.com/questions/23490320/gap-between-border-and-image-when-border-radius-is-added). I am a little bit surprised that a 7 year old article is still needed.
 
-#####2) Background bubbles:
+**2. Background bubbles:**
 The issue was to make the bubble illustrations stay in the same place behind the card when the window changes size or zoom. I kept each attempt as a git branch for reference.
 I tried:
 - Adding bubble illustrations to the body as *multiple backgrounds*. I learned a lot here. I didn't know there is such a feature. I explored it thouroughly.
